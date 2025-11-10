@@ -1,0 +1,8 @@
+node_modules/
+build/
+dist/
+temp/
+__pycache__/
+poetry.lock
+package-lock.json
+.next/

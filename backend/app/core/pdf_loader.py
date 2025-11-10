@@ -1,0 +1,8 @@
+from PyPDF2 import PdfReader
+import io
+
+def extract_text(file_bytes: bytes, filename: str) -> str:
+    if filename.lower().endswith(".pdf"):
+        reader = PdfReader(io.BytesIO(file_bytes))
+        return "\n".join(page.extract_text() or "" for page in reader.pages)
+    return file_bytes.decode("utf-8", errors="ignore")
