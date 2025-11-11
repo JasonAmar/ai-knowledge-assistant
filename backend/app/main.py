@@ -21,5 +21,5 @@ async def root():
     return {"message": "API running successfully"}
 
 def start():
-    """Launched with `poetry run start` at root level"""
+    #Launched with `poetry run server` at root level
     uvicorn.run("app.main:app", host="localhost", port=8000, reload=True)
